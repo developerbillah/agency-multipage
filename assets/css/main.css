@@ -154,8 +154,7 @@ img{
 }
 
 /* SLIDER */
-.side-1{
-  background: linear-gradient(82.4deg, rgba(6, 21, 57, 0.32) 0.92%, rgba(255, 121, 0, 0.32) 95.15%), url('../img/slide1.jpg');
+.side{
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 90vh;
@@ -178,4 +177,24 @@ img{
 .play-btn{
   color: var(--white)!important;
   font-size: 64px;
+}
+
+#hero-slider .owl-prev, #hero-slider .owl-next{
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 40px;
+  display: grid,;
+  place-items: center;
+  font-size: 32px;
+  background: #ffffff59;
+  font-size: 13px;
+}
+
+#hero-slider .owl-prev{
+  left: 0;
+}
+
+#hero-slider .owl-next{
+  right: 0;
 }

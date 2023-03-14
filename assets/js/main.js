@@ -2,6 +2,9 @@ $(document).ready(function(){
   $('#hero-slider').owlCarousel({
     loop:true,
     items: 1,
-    responsiveClass:true,
+    dots: false,
+    nav: true,
+    navText: ['PREV', 'NEXT'],
+    smartSpeed: 1000,
   })
 });
