@@ -359,3 +359,63 @@ img.child {
   background: var(--primary-color);
   left: 0;
 }
+
+
+/* Review */
+.review-text {
+  border-left: 5px solid var(--primary-color);
+  position: relative;
+}
+
+.review-text p{
+  padding: 0px 20px;
+  width: 95%;
+}
+
+.single-review .review-author img {
+  width: 54px;
+  height: 54px;
+}
+
+.author-info {
+  margin-left: 13px;
+}
+
+.single-review .review-author{
+  margin-top: 30px;
+}
+
+.single-review .review-author h4 {
+  margin: 0;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.single-review .review-author span {
+  text-transform: capitalize;
+  font-size: 18px;
+  color: #998F8F;
+}
+
+.review-text {
+  position: relative;
+}
+
+.review-text img {
+  width: 100px!important;
+  position: absolute;
+  right: 70px;
+  bottom: -74px;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: 40px;
+}
+
+#client-review.owl-theme .owl-dots .owl-dot.active span, #client-review .owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--primary-color)!important;
+}
+
+#client-review.owl-theme .owl-dots .owl-dot.active span{
+  width: 30px
+}
