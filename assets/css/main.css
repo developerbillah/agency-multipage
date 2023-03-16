@@ -442,9 +442,10 @@ img.child {
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.165,0.84, 0.44, 1);
+  min-height: 230px;
 }
 
-.photo-galleryWrapper .gallery-item:hover img{
+.photo-galleryWrapper .gallery-item:hover img, .overlay{
   transform: scale(1.1);
 }
 
@@ -453,7 +454,7 @@ img.child {
   position: relative;
 }
 
-.photo-galleryWrapper .gallery-item:nth-child(6){
+.photo-galleryWrapper .gallery-item:nth-child(6) {
   grid-column: span 2;
   display: flex;
   align-items: center;
@@ -462,8 +463,90 @@ img.child {
   background: var(--primary-color);
 }
 
-.photo-galleryWrapper .gallery-item:nth-child(6) h4 {
+.photo-galleryWrapper .gallery-item:nth-child(6) a{
+  width: 100%;
+}
+
+.photo-galleryWrapper .gallery-item:nth-child(6) .overlay{
+  background-color: rgba(255, 121, 0, .5);
+  z-index: 2;
+  opacity: 1;
+}
+
+.photo-galleryWrapper .gallery-item:nth-child(6) .img-overlay img{
+  opacity: 0;
+}
+
+.photo-galleryWrapper .gallery-item:nth-child(6){
   color: var(--dark-color);
   font-size: 36px;
   padding: 20px
+}
+
+.photo-galleryWrapper .gallery-item:nth-child(6) .text{
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-galleryWrapper .gallery-item:nth-child(6) .text h4{
+  font-size: 40px;
+}
+
+.photo-galleryWrapper .gallery-item:nth-child(6) .text p{
+  font-size: 18px;
+  color: var(--dark-color);
+}
+
+
+.img-overlay {
+  position: relative;
+  width:100%;
+}
+
+.img-overlay-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,.5);
+}
+
+.img-overlay:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  width: 86%;
+}
+
+.text h4{
+  color: var(--white);
+  font-size: 14px;
+}
+
+.text p{
+  font-size: 10px;
+  color: var(--gray-text);
 }
